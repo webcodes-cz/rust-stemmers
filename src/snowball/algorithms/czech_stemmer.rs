@@ -1062,10 +1062,10 @@ static G_aeiou: &'static [u8; 3] = &[17, 65, 16];
 
 fn r_mark_regions(env: &mut SnowballEnv, context: &mut Context) -> bool {
     context.i_p1 = env.limit;
-    if !env.go_out_grouping(G_vowel, 97, 367) {
+    if !env.out_grouping(G_vowel, 97, 367) {
         return false;
     }
-env.next_char();    if !env.go_in_grouping(G_vowel, 97, 367) {
+env.next_char();    if !env.in_grouping(G_vowel, 97, 367) {
         return false;
     }
 env.next_char();    context.i_p1 = env.cursor;
