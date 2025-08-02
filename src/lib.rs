@@ -35,6 +35,7 @@ pub enum Algorithm {
     Armenian,
     Basque,
     Catalan,
+    Czech,
     Danish,
     Dutch,
     English,
@@ -83,6 +84,9 @@ impl Stemmer {
             },
             Algorithm::Catalan => Stemmer {
                 stemmer: algorithms::catalan_stemmer::stem,
+            },
+            Algorithm::Czech => Stemmer {
+                stemmer: algorithms::czech_stemmer::stem,
             },
             Algorithm::Danish => Stemmer {
                 stemmer: algorithms::danish_stemmer::stem,
